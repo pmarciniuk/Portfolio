@@ -1,0 +1,152 @@
+.works {
+    list-style: none;
+    position: relative;
+    height: 60rem;
+    
+    
+    &__single {
+        width: 100%;
+        box-shadow: var(--box-shadow-medium);
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(10rem);
+        transition: all .4s cubic-bezier(.56, .22, .31, 1.44);
+        
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        
+    }
+    
+    &__picture {
+        height: 50rem;
+        background-size: cover;
+        background-position: center;
+        
+        &--1 {
+            background-image: url(../img/mockups/natours.jpg);
+        }
+        
+        &--2 {
+            background-image: url(../img/mockups/roshambo.jpg);
+        }
+        
+        &--3 {
+            background-image: url(../img/mockups/trillo.jpg);
+        }
+        
+        &--4 {
+            background-image: url(../img/mockups/atholl-centre.jpg);
+        }
+    }
+    
+    &__description {
+        width: 30%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        background-color: rgba(0, 0, 0, .5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        @media only screen and (max-width: $bp-small) {
+            width: 45%;
+            left: 4%;
+        }
+        
+        &::after {
+            position: absolute;
+            bottom: -5rem;
+            right: -2rem;
+            color: var(--color-primary-dark);
+            font-size: 20rem;
+            line-height: 1;
+            font-weight: 700;
+            
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 15rem;
+            }
+
+        }
+        
+        &--1 {
+            &::after {
+                content: '1';
+            }
+        }
+        
+        &--2 {
+            &::after {
+                content: '2';
+            }
+        }
+        
+        &--3 {
+            &::after {
+                content: '3';
+            }
+        }
+        
+        &--4 {
+            &::after {
+                content: '4';
+            }
+        }
+    
+    }
+    
+    &__text-box {
+        padding-top: 8rem;
+    }
+    
+    &__paragraph {
+        color: #fff;
+        font-size: 1.6rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        
+        &-link {
+            &,
+            &:link,
+            &:visited {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        fill: #fff;
+        cursor: pointer;
+        transition: all .3s;
+        
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+        
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+

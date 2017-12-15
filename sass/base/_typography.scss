@@ -1,0 +1,135 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--color-grey-1);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+}
+
+
+.heading-primary {
+    font-size: 5rem;
+    letter-spacing: 2px;
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 3.5rem;
+    }
+    
+    @media only screen and (min-width: 118em) {
+        font-size: 7rem;
+    }
+    
+    
+    &--main {
+        display: block;
+    }
+    
+    &--sub {
+        display: block;
+        
+        
+        &-underline {
+            position: relative;
+            z-index: 10;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                top: 63%;
+                left: 7%;
+                width: 100%;
+                height: 1.5rem;
+                background-color: var(--color-primary);
+                z-index: -1;
+            }
+        }
+    }
+    
+}
+
+.heading-secondary {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color-dark-1);
+    position: relative;
+    
+    &::before,
+    &::after {
+        content: '';
+        background-color: var(--color-dark-1);
+        position: absolute;
+        width: 4%;
+        height: 2px;
+        top: 50%;
+        
+        @media only screen and (max-width: $bp-small) {
+            width: 6%;
+        }
+    }
+    
+    &::before {
+        left: 42%;
+        transform: translate(-42%, -50%);
+        
+        @media only screen and (max-width: $bp-large) {
+            transform: translate(-60%, -50%);
+        }
+        
+        @media only screen and (max-width: $bp-small) {
+            transform: translate(-90%, -50%);
+            left: 40%;
+        }
+        
+        @media only screen and (max-width: $bp-smallest) {
+            transform: translate(-100%, -50%);
+            left: 39%;
+        }
+        
+    }
+    
+    &::after {
+        left: 58%;
+        transform: translate(-60%, -50%);
+        
+        @media only screen and (max-width: $bp-large) {
+            transform: translate(-42%, -50%);
+        }
+        
+        @media only screen and (max-width: $bp-small) {
+            transform: translate(-11%, -50%);
+            left: 60%;
+        }
+        
+        @media only screen and (max-width: $bp-smallest) {
+            transform: translate(-1%, -50%);
+            left: 61%;
+        }
+    }
+    
+    &--white {
+        color: #fff;
+        
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+    }
+    
+}
+
+
+
+.heading-tertiary {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.paragraph {
+    font-size: 1.5rem;
+}

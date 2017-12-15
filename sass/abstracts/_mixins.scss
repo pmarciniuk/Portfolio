@@ -1,0 +1,11 @@
+@mixin workHidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s cubic-bezier(.56, .22, .31, 1.44);
+}
+
+@mixin workActive {
+    visibility: visible;
+    opacity: 1;
+}

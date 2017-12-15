@@ -1,0 +1,106 @@
+.mobile-menu {
+    
+    &__button {
+        position: fixed;
+        top: 0;
+        right: 6.5rem;
+        text-align: center;
+        cursor: pointer;
+        width: 5rem;
+        height: 5rem;
+        z-index: 100;
+        display: none;
+        
+        @media only screen and (max-width: $bp-small) {
+            display: inline-block;
+        }
+        
+    }
+    
+    &__icon {
+        display: inline-block;
+        position: relative;
+        margin-top: 2.5rem;
+        
+        &,
+        &::before,
+        &::after {
+            width: 3.5rem;
+            height: 2px;
+            background-color: var(--color-grey-1);
+            transition: all .2s;
+        }
+        
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        
+        &::before {
+            top: -1rem;
+        }
+        
+        &::after {
+            top: 1rem;
+        }
+        
+        &--active {
+            background-color: transparent;
+            
+            &::before {
+                top: 0;
+                transform: rotate(135deg);
+            }
+            
+            &::after {
+                top: 0;
+                transform: rotate(-135deg);
+            }
+        }
+        
+    }
+    
+    &__nav {
+        width: 320px;
+        position: fixed;
+        top: 5.5rem;
+        right: 0;
+        z-index: 100;
+        transform: translate(105%, 0);
+        transition: all .3s cubic-bezier(.56, .22, .31, 1.44);
+        box-shadow: var(--box-shadow-medium);
+        
+        &--active {
+            transform: translate(0, 0);
+        }
+    }
+    
+    &__list {
+        list-style: none;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .3);
+        
+    }
+    
+    &__item {
+    }
+    
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: var(--color-grey-1);
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            display: inline-block;
+            padding: 2rem 0;
+            
+        }
+    }
+    
+}

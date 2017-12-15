@@ -1,0 +1,98 @@
+.about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+    
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    &__person {
+        flex: 1;
+    }
+    
+    &__description {
+        flex: 0 0 50%;
+        
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+    }
+    
+    &__technologies {
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 5rem 0;
+        margin-top: 3rem;
+        
+        
+    }
+    
+    &__icon-box {
+        transition: all .3s;
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 1rem 4rem;
+        box-shadow: var(--box-shadow-small);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        
+        @media only screen and (max-width: $bp-large) {
+            flex: 0 0 21%;
+            margin-bottom: 2rem;
+            padding: 2rem 4rem;
+        }
+        
+        &--text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            font-size:  1.5rem;
+            transition: all .3s;
+            display: inline-block;
+            opacity: 0;
+            text-transform: uppercase;
+        }
+        
+        &:hover {
+            transform: translateY(-.5rem);
+            filter: brightness(1.1);
+            box-shadow: 0 2rem 10rem rgba(0, 0, 0, .2);
+        }
+        
+        &:hover &--text {
+            top: 100%;
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+                
+    }
+    
+    &__icon {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    &__arrow {
+        animation: pulse 1s infinite;
+    }
+    
+    &__arrow-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    
+}
