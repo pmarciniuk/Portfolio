@@ -6,10 +6,10 @@
     &,
     &::before,
     &::after {
+        @include transition(all .2s);
         width: 3.5rem;
         height: 2px;
         background-color: var(--color-grey-1);
-        @include transition(all .2s);
     }
 
     &::before,
@@ -31,14 +31,13 @@
         background-color: transparent;
 
         &::before {
-            top: 0;
             @include rotate(135deg);
+            top: 0;
         }
 
         &::after {
-            top: 0;
             @include rotate(-135deg);
-
+            top: 0;
         }
     }
 }
@@ -56,11 +55,11 @@
 }
 
 .icon-work-nav {
+    @include transition(all .3s);
     width: 5rem;
     height: 5rem;
     fill: #fff;
     cursor: pointer;
-    @include transition(all .3s);
 
     &:not(:last-child) {
         margin-right: 2.5rem;

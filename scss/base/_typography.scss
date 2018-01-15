@@ -14,15 +14,15 @@ h1, h2, h3, h4 {
 .heading-primary {
     font-size: 5em;
     letter-spacing: 2px;
-    
+
     @media only screen and (max-width: $bp-small) {
         font-size: 3.5em;
     }
-    
+
     @media only screen and (min-width: 1888px) {
         font-size: 7em;
     }
-    
+
 }
 
 
@@ -31,7 +31,7 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     color: var(--color-dark-1);
     position: relative;
-    
+
     &::before,
     &::after {
         content: '';
@@ -40,63 +40,61 @@ h1, h2, h3, h4 {
         width: 4%;
         height: 2px;
         top: 50%;
-        
+
         @media only screen and (max-width: $bp-small) {
             width: 6%;
         }
     }
-    
+
     &::before {
-        left: 42%;
         @include transform(translate(-42%, -50%));
-        
+        left: 42%;
+
         @media only screen and (max-width: $bp-large) {
             @include transform(translate(-60%, -50%));
         }
-        
+
         @media only screen and (max-width: $bp-small) {
             @include transform(translate(-90%, -50%));
             left: 40%;
         }
-        
+
         @media only screen and (max-width: $bp-smallest) {
             @include transform(translate(-100%, -50%));
             left: 39%;
         }
-        
+
     }
-    
+
     &::after {
-        left: 58%;
         @include transform(translate(-60%, -50%));
-        
+        left: 58%;
+
         @media only screen and (max-width: $bp-large) {
             @include transform(translate(-42%, -50%));
         }
-        
+
         @media only screen and (max-width: $bp-small) {
             @include transform(translate(-11%, -50%));
             left: 60%;
         }
-        
+
         @media only screen and (max-width: $bp-smallest) {
             @include transform(translate(-1%, -50%));
             left: 61%;
         }
     }
-    
+
     &--white {
         color: #fff;
-        
+
         &::before,
         &::after {
             background-color: #fff;
         }
     }
-    
+
 }
-
-
 
 .heading-tertiary {
     font-size: 3.2em;
@@ -104,15 +102,13 @@ h1, h2, h3, h4 {
     letter-spacing: 2px;
 }
 
-
 .paragraph {
     font-size: 1.5em;
-    
+
     &--works {
         color: #fff;
         font-size: 1.6em;
         text-align: center;
     }
-    
-}
 
+}

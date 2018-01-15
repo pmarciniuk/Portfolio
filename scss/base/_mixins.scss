@@ -69,8 +69,8 @@
 	-moz-flex-wrap: $value;
 	@if $value == nowrap {
 		-ms-flex-wrap: none;
-	} @else { 
-		-ms-flex-wrap: $value; 
+	} @else {
+		-ms-flex-wrap: $value;
 	}
 	flex-wrap: $value;
 }
@@ -86,7 +86,7 @@
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 	} @else if $value == space-around {
-		-ms-flex-pack: distribute;		
+		-ms-flex-pack: distribute;
 	} @else {
 		-webkit-box-pack: $value;
 		-ms-flex-pack: $value;
@@ -110,4 +110,33 @@
 	-webkit-align-items: $value;
 	-moz-align-items: $value;
 	align-items: $value;
+}
+
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+	$fg-boxflex: $fg;
+	@if type-of($fg) == 'list' {
+		$fg-boxflex: nth($fg, 1);
+	}
+
+	-webkit-box-flex: $fg-boxflex;
+	-webkit-flex: $fg $fs $fb;
+	-moz-box-flex: $fg-boxflex;
+	-moz-flex: $fg $fs $fb;
+	-ms-flex: $fg $fs $fb;
+	flex: $fg $fs $fb;
+}
+
+@mixin animation($animation...) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
 }
