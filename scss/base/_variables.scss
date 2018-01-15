@@ -18,13 +18,14 @@
     --box-shadow-big: 0 2rem 5rem rgba(0, 0, 0, .5);
     --box-shadow-medium: 0 2rem 5rem rgba(0, 0, 0, .3);
     --box-shadow-small: 0 2rem 10rem rgba(0, 0, 0, .13);
-    
+    --gowno: 123;
 }
+
 
 // Media queries
 
-$bp-largest: 75em;     // 1200px 
-$bp-large: 56.25em;     // 900px
-$bp-medium: 43.75em;     // 700px
-$bp-small: 37.5em;     // 600px
-$bp-smallest: 25em;     // 400px
+$bp-largest: 1200px;     // 1200px 
+$bp-large: 900px;     // 900px
+$bp-medium: 700px;     // 700px
+$bp-small: 600px;     // 600px
+$bp-smallest: 400px;     // 400px

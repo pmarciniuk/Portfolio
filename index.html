@@ -2,12 +2,33 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111332759-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111332759-1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawel Marciniuk Portfolio</title>
+    <meta property="fb:app_id" content="800612493457765" />
+    <meta property="og:url" content="http://pmarciniuk.co.uk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pawel Marciniuk" />
+    <meta property="og:description" content="Frontend / Web developer" />
+    <meta property="og:image" content="http://pmarciniuk.co.uk/img/bg-min.jpg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="frontend, web, developer, frontend developer, web developer">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Merriweather:400,400i,700" rel="stylesheet">
+    <title>Pawel Marciniuk Portfolio</title>
+    <!-- build:css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+    
 </head>
 
 <body>
@@ -20,20 +41,18 @@
     </div>
     <div class="mobile-menu">
         <div class="mobile-menu__button">
-            <span class="mobile-menu__icon">
-                &nbsp;
-            </span>
+            <span class="mobile-menu__button--icon"></span>
         </div>
         <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-                <li class="mobile-menu__item">
-                    <a href="#section-about" class="mobile-menu__link">About Me</a>
+            <ul class="mobile-menu__nav--list">
+                <li class="mobile-menu__nav--item">
+                    <a href="#about" class="mobile-menu__nav--link">About Me</a>
                 </li>
-                <li class="mobile-menu__item">
-                    <a href="#section-works" class="mobile-menu__link">My Work</a>
+                <li class="mobile-menu__nav--item">
+                    <a href="#works" class="mobile-menu__nav--link">My Work</a>
                 </li>
-                <li class="mobile-menu__item">
-                    <a href="#section-contact" class="mobile-menu__link">Contact</a>
+                <li class="mobile-menu__nav--item">
+                    <a href="#contact" class="mobile-menu__nav--link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -41,25 +60,25 @@
     <header id="header" class="header">
 
         <div class="header__container">
-            <div class="header__logo-box">
-                <a href="#" class="header__logo">Pm.</a>
+            <div class="header__logo">
+                <a href="http://pmarciniuk.co.uk/" class="header__logo--link">Pm.</a>
             </div>
 
 
             <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="#section-about" class="header__link">
+                <ul class="header__nav--list">
+                    <li class="header__nav--item">
+                        <a href="#about" class="header__nav--link">
                                     About Me
                                 </a>
                     </li>
-                    <li class="header__item">
-                        <a href="#section-works" class="header__link">
+                    <li class="header__nav--item">
+                        <a href="#works" class="header__nav--link">
                                     My Work
                                 </a>
                     </li>
-                    <li class="header__item">
-                        <a href="#section-contact" class="header__link">
+                    <li class="header__nav--item">
+                        <a href="#contact" class="header__nav--link">
                                     Contact
                                 </a>
                     </li>
@@ -67,14 +86,16 @@
             </nav>
         </div>
 
-        <div class="header__text-box">
-            <h1 class="heading-primary">
-                <span class="heading-primary--main">Opportunities don't happen.</span>
-                <span class="heading-primary--sub">You <span class="heading-primary--sub-highlighted">create</span> them.</span>
+        <div class="header__slogan">
+            <h1 class="header__text--heading">
+                Opportunities don't happen.
             </h1>
+            <h2 class="header__text--subheading">
+                You <strong class="header__text--highlighted">create</strong> them.
+            </h2>
         </div>
-        <div class="header__cta-box">
-            <a href="#section-works" class="btn btn-primary btn--animated">Check my work</a>
+        <div class="header__cta">
+            <a href="#works" class="header__cta--button">Check my work</a>
         </div>
 
 
@@ -83,143 +104,138 @@
     <!--   SECTION ABOUT    -->
 
     <main>
-        <section id="section-about" class="section-about section">
+        <section id="about" class="about">
 
-            <h2 class="heading-secondary u-text-center u-margin-bottom-medium">
+            <h2 class="about__text--heading">
                 About Me
             </h2>
-            <div class="wrapper">
-                <div class="about">
-                    <div class="about__person details">
+            <div class="about__inner">
+                <div class="about__person person">
+                    <span class="person__text--span">Hello</span>
+                    <span class="person__text--span">I'm</span>
+                    <span class="person__text--span person__text--name">Pawel Marciniuk</span>
+                    <span class="person__text--span person__text--job">Frontend Developer</span>
+                    <a href="https://drive.google.com/open?id=1Cc-DuArfKp-8Y6XvJhsJzM2QHQ1C40GP" target="_blank" class="person__button--cv">Cv</a>
+                    <a href="#contact" class="person__button--contact">Contact Me</a>
 
-                        <span class="details__word">Hello</span>
-                        <span class="details__word">I'm</span>
-                        <span class="details__name">Pawel Marciniuk</span>
-                        <span class="details__job">Frontend Developer</span>
-                        <a href="https://drive.google.com/open?id=16s_iUFADLX3Vq2eh04ehUCbeD2wijaP-" target="_blank" class="btn btn-secondary u-margin-right-medium">Cv</a>
-                        <a href="#section-contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="about__description">
+                    <p class="about__text--paragraph">I completed an Engineer's degree in faculty of Electrotechnics at Lublin University of Technology in Poland. One year of my studies I spent abroad in Spain which gave me an unique opportunity of finding myself in an international environment. I always try to look for inspiration everywhere I am.</p>
 
-                    </div>
-                    <div class="about__description">
-                        <p class="paragraph">I completed an Engineer's degree in faculty of Electrotechnics at Lublin University of Technology in Poland. One year of my studies I spent abroad in Spain which gave me an unique opportunity of finding myself in an international environment. I always try to look for inspiration everywhere I am.</p>
+                    <p class="about__text--paragraph">Once I finished university I left home for a half-year solo hitchhiking trip around Europe and Mexico. During my travel I learnt how to face stressful situations and solve problems myself. My good English and Spanish skills give me opportunity to look at things from other points of view and are very helpful to communicate well with people all around the world.</p>
 
-                        <p class="paragraph">Once I finished university I left home for a half-year solo hitchhiking trip around Europe and Mexico. During my travel I learnt how to face stressful situations and solve problems myself. My good English and Spanish skills give me opportunity to look at things from other points of view and are very helpful to communicate well with people all around the world.</p>
-
-                        <p class="paragraph">I have the ability to adapt to working as part of a development team. Also I consider myself a quick learner with good analytical skills. I am ready, willing, and able to put in extra time to do the job well.</p>
-                    </div>
-                    <div class="about__technologies u-margin-bottom-big">
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                    <p class="about__text--paragraph">I have the ability to adapt to working as part of a development team. Also I consider myself a quick learner with good analytical skills. I am ready, willing, and able to put in extra time to do the job well.</p>
+                </div>
+                <div class="about__technologies technologies">
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-photoshop-cc"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Photoshop
-                            </figurecaption>
-                        </figure>
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                        <figurecaption class="technologies__item--text">
+                            Photoshop
+                        </figurecaption>
+                    </figure>
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-Bootstrap"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Bootstrap
-                            </figurecaption>
-                        </figure>
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                        <figurecaption class="technologies__item--text">
+                            Bootstrap
+                        </figurecaption>
+                    </figure>
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-Javascript"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Javascript
-                            </figurecaption>
-                        </figure>
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                        <figurecaption class="technologies__item--text">
+                            Javascript
+                        </figurecaption>
+                    </figure>
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-Sass"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Sass
-                            </figurecaption>
-                        </figure>
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                        <figurecaption class="technologies__item--text">
+                            Sass
+                        </figurecaption>
+                    </figure>
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-Css3"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Css3
-                            </figurecaption>
-                        </figure>
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                        <figurecaption class="technologies__item--text">
+                            Css3
+                        </figurecaption>
+                    </figure>
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-Html5"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Html5
-                            </figurecaption>
-                        </figure>
-                        <figure class="about__icon-box">
-                            <svg class="about__icon">
+                        <figurecaption class="technologies__item--text">
+                            Html5
+                        </figurecaption>
+                    </figure>
+                    <figure class="technologies__item">
+                        <svg class="technologies__item--icon">
                                 <use xlink:href="img/sprite.svg#icon-Git"></use>
                             </svg>
-                            <figurecaption class="about__icon-box--text">
-                                Git
-                            </figurecaption>
-                        </figure>
+                        <figurecaption class="technologies__item--text">
+                            Git
+                        </figurecaption>
+                    </figure>
 
 
-                    </div>
-                    <a href="#section-works" class="about__arrow">
-                        <svg class="about__arrow-icon">
+                </div>
+                <a href="#works" class="about__cta">
+                        <svg class="about__cta--icon">
                             <use xlink:href="img/sprite.svg#icon-down"></use>
                         </svg>
                     </a>
-                </div>
-
             </div>
+
 
         </section>
 
         <!-- QUOTE SECTION -->
 
-        <section class="section-quote">
-            <div class="wrapper">
-                <blockquote class="quote">
-                    "Try not to become a person of success, but rather try to become a person of value." <span class="quote__author">Albert Einstein</span>
-                </blockquote>
-            </div>
+        <section class="quote">
+            <blockquote class="quote__inner">
+                <span class="quote__text--span">
+                        "Try not to become a person of success, but rather try to become a person of value."
+                    </span>
+                <span class="quote__text--span quote__text--author">Albert Einstein</span>
+            </blockquote>
         </section>
 
         <!-- MY WORKS SECTION -->
 
-        <section id="section-works" class="section-works section">
-            <h2 class="heading-secondary u-text-center u-margin-bottom-big">
-                My works
-            </h2>
-            <div class="wrapper">
+        <section id="works" class="works">
+            <div class="works__inner">
+                <h2 class="works__text--heading">
+                    My works
+                </h2>
+                <ul class="works__list">
+                    <li class="works__item">
+                        <div class="works__item--picture"></div>
+                        <div class="works__item--description">
 
-                <ul class="works">
-                    <li class="works__single">
-                        <div class="works__picture works__picture--1">
-                            &nbsp;
-                        </div>
-                        <div class="works__description works__description--1">
-
-                            <div class="works__text-box">
-                                <h3 class="heading-tertiary u-text-center">
+                            <div class="works__item--header">
+                                <h3 class="works__text--item-heading">
                                     Natours
                                 </h3>
-                                <p class="works__paragraph">
+                                <p class="works__text--paragraph">
                                     Project made on Advanced CSS/SASS course.
                                 </p>
                             </div>
-                            <a href="https://pmarciniuk.github.io/Natours/" target="_blank" class="btn btn-primary">See the project</a>
+                            <a href="https://pmarciniuk.github.io/Natours/" target="_blank" class="works__item--button">See the project</a>
                             <div class="works__nav">
-                                <a href="#" class="works__nav-link previous">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-prev-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-previous"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="works__nav-link next">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-next-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-next"></use>
                                     </svg>
                                 </a>
@@ -227,29 +243,27 @@
                         </div>
                     </li>
 
-                    <li class="works__single">
-                        <div class="works__picture works__picture--2">
-                            &nbsp;
-                        </div>
-                        <div class="works__description works__description--2">
+                    <li class="works__item">
+                        <div class="works__item--picture"></div>
+                        <div class="works__item--description">
 
-                            <div class="works__text-box">
-                                <h3 class="heading-tertiary">
+                            <div class="works__item--header">
+                                <h3 class="works__text--item-heading">
                                     Roshambo
                                 </h3>
-                                <p class="works__paragraph">
+                                <p class="works__text--paragraph">
                                     Simple Rock, Paper, Scissors game with few CSS tricks.
                                 </p>
                             </div>
-                            <a href="https://pmarciniuk.github.io/Roshambo/" target="_blank" class="btn btn-primary">See the project</a>
+                            <a href="https://pmarciniuk.github.io/Roshambo/" target="_blank" class="works__item--button">See the project</a>
                             <div class="works__nav">
-                                <a href="#" class="works__nav-link previous">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-prev-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-previous"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="works__nav-link next">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-next-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-next"></use>
                                     </svg>
                                 </a>
@@ -257,29 +271,27 @@
                         </div>
                     </li>
 
-                    <li class="works__single">
-                        <div class="works__picture works__picture--3">
-                            &nbsp;
-                        </div>
-                        <div class="works__description works__description--3">
+                    <li class="works__item">
+                        <div class="works__item--picture"></div>
+                        <div class="works__item--description">
 
-                            <div class="works__text-box">
-                                <h3 class="heading-tertiary">
+                            <div class="works__item--header">
+                                <h3 class="works__text--item-heading">
                                     Trillo
                                 </h3>
-                                <p class="works__paragraph">
+                                <p class="works__text--paragraph">
                                     Another project made on Advanced CSS/SASS course.
                                 </p>
                             </div>
-                            <a href="https://pmarciniuk.github.io/Trillo/" target="_blank" class="btn btn-primary">See the project</a>
+                            <a href="https://pmarciniuk.github.io/Trillo/" target="_blank" class="works__item--button">See the project</a>
                             <div class="works__nav">
-                                <a href="#" class="works__nav-link previous">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-prev-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-previous"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="works__nav-link next">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-next-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-next"></use>
                                     </svg>
                                 </a>
@@ -287,35 +299,34 @@
                         </div>
                     </li>
 
-                    <li class="works__single">
-                        <div class="works__picture works__picture--4">
-                            &nbsp;
-                        </div>
-                        <div class="works__description works__description--4">
+                    <li class="works__item">
+                        <div class="works__item--picture"></div>
+                        <div class="works__item--description">
 
-                            <div class="works__text-box">
-                                <h3 class="heading-tertiary">
+                            <div class="works__item--header">
+                                <h3 class="works__text--item-heading">
                                     Atholl Centre
                                 </h3>
-                                <p class="works__paragraph">
+                                <p class="works__text--paragraph">
                                     My very first website project made for Atholl Centre Baptist Church Community located in Pitlochry, Scotland where I used to volunteer.
                                 </p>
                             </div>
-                            <a href="https://pmarciniuk.github.io/HotelOnePage/" target="_blank" class="btn btn-primary">See the project</a>
+                            <a href="https://pmarciniuk.github.io/HotelOnePage/" target="_blank" class="works__item--button">See the project</a>
                             <div class="works__nav">
-                                <a href="#" class="works__nav-link previous">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-prev-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-previous"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="works__nav-link next">
-                                    <svg class="works__icon">
+                                <a href="#" class="works__nav--link js-next-button">
+                                    <svg class="works__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-next"></use>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </section>
@@ -323,25 +334,23 @@
 
         <!-- CONTACT SECTION -->
 
-        <section id="section-contact" class="section-contact section">
-            <h2 class="heading-secondary heading-secondary--white u-text-center u-margin-bottom-big">
+        <section id="contact" class="contact">
+            <h2 class="contact__text--heading">
                 Contact
             </h2>
-            <div class="wrapper">
-                <div class="contact">
-                    <a href="mailto:p.marciniuk91@gmail.com" class="contact__email">
+            <div class="contact__inner">
+                <a href="mailto:p.marciniuk91@gmail.com" class="contact__email">
                         <svg class="contact__icon">
                             <use xlink:href="img/sprite.svg#icon-Gmail"></use>
                         </svg>
-                        <span>p.marciniuk91@gmail.com</span>
+                        <span class="contact__text--span">p.marciniuk91@gmail.com</span>
                     </a>
-                    <a href="tel:+44 774 2807808" class="contact_phone">
+                <a href="tel:+44 774 2807808" class="contact__phone">
                         <svg class="contact__icon">
                             <use xlink:href="img/sprite.svg#icon-phone"></use>
                         </svg>
-                        <span>+44 774 2807808</span>
+                        <spanc class="contact__text--span">+44 774 2807808</span>
                     </a>
-                </div>
             </div>
 
         </section>
@@ -351,30 +360,34 @@
     <!--  FOOTER SECTION  -->
 
     <footer class="footer">
-        <ul class="footer__social-list">
-            <li class="footer__social-item">
-                <a href="https://www.linkedin.com/in/pawel-marciniuk" target="_blank" class="footer__link">
-                    <svg class="footer__icon">
+        <ul class="footer__social--list">
+            <li class="footer__social--item">
+                <a href="https://www.linkedin.com/in/pawel-marciniuk" target="_blank" class="footer__social--link">
+                    <svg class="footer__social--icon">
                         <use xlink:href="img/sprite.svg#icon-LinkedIn"></use>
                     </svg>
                 </a>
             </li>
-            <li class="footer__social-item">
-                <a href="https://github.com/pmarciniuk" target="_blank" class="footer__link">
-                    <svg class="footer__icon">
+            <li class="footer__social--item">
+                <a href="https://github.com/pmarciniuk" target="_blank" class="footer__social--link">
+                    <svg class="footer__social--icon">
                         <use xlink:href="img/sprite.svg#icon-GitHub"></use>
                     </svg>
                 </a>
             </li>
         </ul>
         <div class="footer__legal">
-            &copy; 2017 by Pawel Marciniuk. All rights reserved.
+            <span class="footer__text--legal">
+                &copy; 2017 by Pawel Marciniuk. All rights reserved.
+            </span>
         </div>
     </footer>
+    <!-- build:js -->
     <script src="js/index.js"></script>
     <script src="js/works.js"></script>
     <script src="js/mobile-menu.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

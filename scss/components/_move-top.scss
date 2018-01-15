@@ -3,19 +3,19 @@
     bottom: 3%;
     right: 3%;
     z-index: 100;
-    transition: all .3s cubic-bezier(.56, .22, .31, 1.44);
+    @include transition(all .3s cubic-bezier(.56, .22, .31, 1.44));
     opacity: 0;
     visibility: hidden;
-    transform: scale(0);
+    @include transform(scale(0));
     
     &--active {
         opacity: 1;
         visibility: visible;
-        transform: scale(1);
+        @include transform(scale(1));
     }
     
     &:hover {
-        transform: scale(1.15);
+        @include transform(scale(1.15));
     }
     
     &__link {
@@ -24,9 +24,8 @@
     
     
     &__icon {
-        width: 5rem;
-        height: 5rem;
-        fill: var(--color-primary-light);
+        @extend .icon-arrow-top;
     }
     
 }
+
