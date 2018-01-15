@@ -1,0 +1,52 @@
+.technologies {
+    
+    &__item {
+        @include transition(all .3s);
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 1rem 4rem;
+        @include box-shadow(var(--box-shadow-small));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        
+        @media only screen and (max-width: $bp-large) {
+            flex: 0 0 21%;
+            margin-bottom: 2rem;
+            padding: 2rem 4rem;
+        }
+        
+        &--icon {
+            @extend .icon-technologie;
+        }
+        
+        &--text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            z-index: -1;
+            font-size:  1.5em;
+            @include transition(all .3s);
+            display: inline-block;
+            opacity: 0;
+            text-transform: uppercase;
+        }
+        
+        &:hover {
+            @include transform(translateY(-.5rem));
+            @include box-shadow(0 2rem 10rem rgba(0, 0, 0, .2));
+            filter: brightness(1.1);
+        }
+        
+        &:hover &--text {
+            top: 100%;
+            opacity: 1;
+            @include transform(translate(-50%, 0));
+        }
+                
+    }
+}
+
