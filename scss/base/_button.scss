@@ -3,43 +3,41 @@
     &:link,
     &:visited {
         @include link-styles;
+        @include transition(all, .3s);
         color: var(--color-dark-1);
         display: inline-block;
-        
         border-radius: .5rem;
-        @include transition(all, .3s);
     }
-    
-    
+
+
     &-primary {
         padding: 1rem 4rem;
         font-size: 1.6em;
         background-color: var(--color-primary);
-        
+
         &:hover {
             @include box-shadow(var(--box-shadow-big));
             @include transform(translateY(-.5rem));
         }
     }
-    
-    
+
+
     &-secondary {
+        @include box-shadow(0 1rem 3rem rgba(0, 0, 0, .2));
         padding: .5rem 2rem;
         font-size: 1.3em;
-        @include box-shadow(0 1rem 3rem rgba(0, 0, 0, .2));
         background-color: var(--color-primary-light);
-        
+
         &:hover {
             @include transform(translateY(-.3rem));
             @include box-shadow(0 2rem 3rem rgba(0, 0, 0, .2));
         }
     }
-    
+
     &--animated {
-        animation: fadeUp .5s ease-out .75s;
+        @include animation(fadeUp .5s ease-out .75s);
         animation-fill-mode: backwards;
     }
-            
 }
 
 .btn-mobile-menu {
@@ -57,4 +55,3 @@
         display: inline-block;
     }
 }
-

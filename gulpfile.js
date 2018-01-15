@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglifyes');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -39,14 +39,14 @@ gulp.task('reload', function() {
 });
 
 gulp.task('serve', ['sass'], function() {
-    
+
     browserSync({
         server: config.src
     });
-    
+
     gulp.watch([config.htmlin, config.jsin], ['reload']);
     gulp.watch(config.scssin, ['sass']);
-    
+
 });
 
 gulp.task('sass', function() {
@@ -72,7 +72,10 @@ gulp.task('css', function() {
 gulp.task('js', function() {
     return gulp.src(config.jsin)
     .pipe(concat(config.jsoutname))
-    .pipe(uglify())
+    .pipe(uglify({
+        mangle: false,
+        ecma: 6
+    }))
     .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(gulp.dest(config.jsout));
 });
